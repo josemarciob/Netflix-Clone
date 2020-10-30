@@ -19,17 +19,23 @@ body{
 
 header .container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-right: 20px;
+    width: 100%;
 }
 
 header .logo{
+    
     color: var(--vermelho);
     font-family: 'Arial Black', Times;
     font-size: 40px;
-    margin-left: 10px;
+    margin: 0 20px 0 10px;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 20px;
 }
 
 header nav a{
@@ -41,13 +47,120 @@ header nav a{
 header nav a:hover {
     color: #fff;
 }
+header .navegation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px 0 auto;
+}
+header .navegation .fas{
+    text-decoration: none;
+    margin-right: 20px;
+}
+header .navegation .profile{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    height: 35px;
+    width: 35px;
+}
+header .navegation .profile:hover{
+    transform: scale(1.20);
+    transition: transform 0.5s;
+}
+
+header .navegation .profile:active{
+    height: 45px;
+    width: 45px;
+}
+
+/*trocar perfil*/
+[hidden]{
+    display: none !important
+}
+#troca-profile{
+    background-color: rgb(10, 10, 10);
+    height: 500px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+#troca-profile .titulo-profiles{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#troca-profile .link, .link2{
+    text-decoration: none;
+}
+
+#troca-profile .lista-profile .profile-lista{
+    width: 100px;
+    height: 100px;
+    margin: 25px 10px;
+}
+#troca-profile .lista-profile .profile-lista:hover{
+    transform: scale(1.10);
+    transition: transform 0.5s;
+}
+
+#troca-profile .nome-profiles{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+#troca-profile .nome-profiles div{
+    margin: 0px 35px 0 45px;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+#troca-profile .edit-profiles{
+    display:flex;
+    justify-content: space-evenly;
+    
+}
+#troca-profile .edit-profiles div{
+    margin: 18px 55px 0 55px;
+    font-size: 20px;
+}
+
+#troca-profile .edit-profiles .edit-perfil-um:hover{
+    transform: scale(1.25);
+    transition: border 0.5s;
+    
+}
+#troca-profile .edit-profiles .edit-perfil-dois:hover{
+    transform: scale(1.25);
+    transition: transform 0.5s;
+}
+
+#troca-profile .add-profile {
+    color: rgb(211, 211, 211);
+    font-size: 40px;
+    margin: 36px 0 16px 0;
+}
+#troca-profile .add-profile:hover {
+    color: white;
+    transform: scale(1.20);
+    transition: transform 0.5s;
+    transition: color 1s;
+}
+
+#troca-profile .add {
+    font-size: 18px;
+}
+
 
 /*principal*/
 main .principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/capa-star-trek.jpg');
+    background: url('../img/capa-star-trek.jpg');
     
-    height: 400px;
+    height: 500px;
     background-size: cover;
 
     display: flex;

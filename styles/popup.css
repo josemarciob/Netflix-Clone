@@ -1,0 +1,109 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-container.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: rgb(20, 20, 20);
+    width: 50%;
+    height: 85%;
+    min-width: 300px;
+    padding: 20px 40px;
+    border: 8px solid #161616;
+    box-shadow: 0 0 0 6px rgb(20, 20, 20);
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to{
+          opacity: 1;
+          transform: translate3d(0,0,0);
+     }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.modal .modal-image{
+    width: 100%;
+    height: 70%;
+}
+
+.modal .titulo{
+    margin: 10px;
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.modal .sub-titulo{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .icons{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+.modal .icons .fa-play:hover{
+    transform: scale(1.70);
+    transition: transform 0.5s;
+}
+.modal .icons .fa-info-circle:hover{
+    transform: scale(1.70);
+    transition: transform 0.5s;
+}
+.modal .icons .fa-plus-circle:hover{
+    transform: scale(1.70);
+    transition: transform 0.5s;
+}
+.modal .icons .fa-thumbs-up:hover{
+    transform: scale(1.70);
+    transition: transform 0.5s;
+}
+.modal .icons .fa-thumbs-down:hover{
+    transform: scale(1.70);
+    transition: transform 0.5s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid white;
+    background:  #c90000;
+    color: white;
+    font-family: 'Trebuchet MS', Arial, sans-serif; 
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3)
+};
+
+
